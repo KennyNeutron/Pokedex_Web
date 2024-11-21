@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex Web</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header-home">
+        <div class="container">
+          <div class="logo-wrapper">
+            <img
+              src="assets/icon.png"
+              alt="pokedex_logo"
+              height="50px"
+              width="50px"
+            />
+            <h1>Pokédex Web</h1>
+          </div>
+          <div class="search-wrapper">
+            <div class="search-wrap">
+              <img
+                src="assets/search.svg"
+                alt="search icon"
+                class="search-icon"
+              />
+              <input
+                type="text"
+                class="search-input-b3-fonts"
+                placeholder="Search"
+                id="search_input"
+              />
+              <img
+                src="assets/cross.svg"
+                alt="close icon"
+                class="close-icon"
+                id="search-close-icon"
+              />
+            </div>
+            <div class="sort-wrapper">
+              <div class="sort-wrap">
+                <img
+                  src="assets/sorting.svg"
+                  alt="sort icon"
+                  class="sort-icon"
+                  id="sort-icon"
+                />
+              </div>
+              <div class="filter-wrapper">
+                <p class="b2-fonts">Sort by:</p>
+                <div class="filter-wrap">
+                  <div>
+                    <input type="radio" id="name" name="sort" value="name" />
+                    <label for="name">Name</label>
+                    <input type="radio" id="id" name="sort" value="id" />
+                    <label for="id">ID</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="pokemons-wrapper">
+        <div class="container">
+          <div class="list-wrapper"></div>
+        </div>
+        <div id="not-found-message"></div>
+      </section>
+    </main>
+  </body>
+</html>
