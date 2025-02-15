@@ -3,58 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex Web</title>
+    <title>Pokémon KN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/icon.png" />
+    <script src="./pokemon.js" defer></script>
+    <script src="./search.js" defer></script>
   </head>
   <body>
     <main class="main">
-      <header class="header-home">
+      <header class="header home">
         <div class="container">
           <div class="logo-wrapper">
             <img
-              src="assets/icon.png"
-              alt="pokedex_logo"
-              height="50px"
-              width="50px"
+              src="./assets/icon.png"
+              alt="pokeball"
+              height="30px"
+              width="30px"
             />
-            <h1>Pokédex Web</h1>
+            <h1>Pokédex</h1>
           </div>
           <div class="search-wrapper">
             <div class="search-wrap">
               <img
-                src="assets/search.svg"
+                src="./assets/search.svg"
                 alt="search icon"
                 class="search-icon"
               />
               <input
                 type="text"
-                class="search-input-b3-fonts"
+                class="search-input body3-fonts"
                 placeholder="Search"
-                id="search_input"
+                id="search-input"
               />
               <img
-                src="assets/cross.svg"
-                alt="close icon"
-                class="close-icon"
+                src="./assets/cross.svg"
+                alt="cross icon"
+                class="search-close-icon"
                 id="search-close-icon"
               />
             </div>
             <div class="sort-wrapper">
               <div class="sort-wrap">
                 <img
-                  src="assets/sorting.svg"
-                  alt="sort icon"
+                  src="./assets/sorting.svg"
+                  alt="sorting"
                   class="sort-icon"
                   id="sort-icon"
                 />
               </div>
               <div class="filter-wrapper">
-                <p class="b2-fonts">Sort by:</p>
+                <p class="body2-fonts">Sort by:</p>
                 <div class="filter-wrap">
                   <div>
-                    <input type="radio" id="name" name="sort" value="name" />
-                    <label for="name">Name</label>
-                    <input type="radio" id="id" name="sort" value="id" />
-                    <label for="id">ID</label>
+                    <input
+                      type="radio"
+                      id="number"
+                      name="filters"
+                      value="number"
+                      checked
+                    />
+                    <label for="number" class="body3-fonts">Number</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="name" name="filters" value="name" />
+                    <label for="name" class="body3-fonts">Name</label>
                   </div>
                 </div>
               </div>
@@ -62,11 +74,11 @@
           </div>
         </div>
       </header>
-      <section class="pokemons-wrapper">
+      <section class="pokemon-list">
         <div class="container">
           <div class="list-wrapper"></div>
         </div>
-        <div id="not-found-message"></div>
+        <div id="not-found-message">Pokemon not found</div>
       </section>
     </main>
   </body>
